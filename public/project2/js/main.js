@@ -35,15 +35,17 @@ function loadPlanets(){
 
 	for(var key in planets){
 
+		// if(planets[key].tilt==0)addSphere({x: planets[key].distance, vz: planets[key].velocity, name: key});
+		// if(planets[key].tilt!=0)addSphere({x: planets[key].distance, y: planets[key].distance/planets[key].tilt, vz: planets[key].velocity, name: key});
 		addSphere({x: planets[key].distance, vz: planets[key].velocity, name: key});
 
 	}
 
 //------------------- END YOUR CODE
-	// scene.add(spotlight);
-	// scene.remove(light);
-	// scene.remove(ambientLight);
-	// scene.remove(background);
+	 scene.add(sl);
+	 scene.remove(light);
+	 scene.remove(ambientLight);
+	 scene.remove(background);
 }
 
 /*
@@ -151,8 +153,8 @@ function getVelocity(obj) {
 function getPosition(obj) {
 	v = getVelocity(obj);
 	obj.v = v;
-	a= getAcceleration(obj);
-  	obj.a=a;
+	// a= getAcceleration(obj);
+ //  	obj.a=a;
 
 
 	//if(obj.pos.x<=0) {v.x= v.x -a.x; v.x *=-1}
