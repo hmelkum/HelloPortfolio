@@ -30,7 +30,7 @@ function initShapes(){
     mats[p] = new THREE.MeshLambertMaterial( { map: textures[p], name:p } );
   }
 
-  mats['sun'] = new THREE.MeshPhongMaterial( { color: 0xffffff, specular: 0x050505, shininess:100, name:'sun' } );
+  //mats['sun'] = new THREE.MeshPhongMaterial( { color: 0xffffff, specular: 0x050505, shininess:100, name:'sun' } );
   mats['sun'].side = THREE.BackSide;
 
   mats['box'] = new THREE.MeshPhongMaterial( { map: basicTexture(2), name:'box' } );
@@ -156,7 +156,10 @@ function loadAssets(callback) {
                 textures['uranus'] = texture;
                 new THREE.TextureLoader().load(`assets/2k_venus.jpg`, function(texture){
                   textures['venus'] = texture;
-                  callback();
+                  new THREE.TextureLoader().load(`assets/sun.jpg`, function(texture){
+                    textures['sun'] = texture;
+                    callback();
+                  });
                 });
               });
             });    
