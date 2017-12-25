@@ -19,7 +19,7 @@ setupWorld();
 
 function setupWorld() {
 	drawAxes();
-	for(var i=0;i<20;i++){
+	for(var i=0;i<10;i++){
 	addSphere({x: Math.random()*99, y:Math.random()*99, z: Math.random()*99, vx: Math.random()*5,vy: Math.random()*5,vz: Math.random()*10,ax: Math.random()*50,ay: Math.random()*50,az: Math.random()*50});
 	}
 	// TODO

@@ -35,8 +35,8 @@ function loadPlanets(){
 
 	for(var key in planets){
 
-		// if(planets[key].tilt==0)addSphere({x: planets[key].distance, vz: planets[key].velocity, name: key});
-		// if(planets[key].tilt!=0)addSphere({x: planets[key].distance, y: planets[key].distance/planets[key].tilt, vz: planets[key].velocity, name: key});
+		 //if(planets[key].tilt==0)addSphere({x: planets[key].distance, vz: planets[key].velocity, name: key});
+		 //if(planets[key].tilt!=0)addSphere({x: planets[key].distance, y: planets[key].distance/Math.tan(planets[key].tilt), vz: planets[key].velocity, name: key});
 		addSphere({x: planets[key].distance, vz: planets[key].velocity, name: key});
 
 	}
